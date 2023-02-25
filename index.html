@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Meta tags for search engines to crawl -->
+	<meta name="robots" content="index,follow">
+	<meta name="description" content="红色电影意象--一个用于红色电影理解的整体数据集。">
+	<meta name="keywords" content="emptyshot, dataset, mmlab, movie, deep learning, video analysis, computer vision">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+		integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Title and Icon -->
+	<title>红色电影意象——一个用于红色电影镜头理解的整体数据集</title>
+	<link rel="shortcut icon" href="./emptyshot.ico" />
+
+	<!-- include css -->
+	<link rel="stylesheet" href="css/index.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+	<script src="js/annimations.js"></script>
+	<script src="js/responsive.js"></script>
+</head>
+
+<body>
+    <!-- 导航栏部分 -->
+	<nav class="navbar navbar-expand-md navbar-light  fixed-top shadow" style="background-color: #ffffff;" id="nav-bar">
+		<div class=" col-xl-2  col-md-2 col-2">
+			<a class="navbar-brand pull-right color-cayan" href="#banner" onclick="slideTo('banner'); return false;">
+				<img src="src/imgs/emptyshot_logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+				<b>红色电影意象</b>
+			</a>
+		</div>
+
+		<div class="col-xl-6 col-md-6 col-6">
+			<div class="collapse navbar-collapse " id="nav-links1">
+				<div class="navbar-nav ">
+					<a class="nav-item nav-link text-grey" href="#about"
+						onclick="slideTo('about');  return false;">About</a>
+					<a class="nav-item nav-link text-grey" href="#contrast"
+						onclick="slideTo('contrast');  return false;">Contrast</a>
+					<a class="nav-item nav-link text-grey" href="#download"
+						onclick="slideTo('download');  return false;">Download</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="offset-xl-1 col-xl-2 offset-xl-1   offset-md-1 col-md-3 col-0">
+			<div class="collapse navbar-collapse pull-right" id="nav-links2">
+				<div class="navbar-nav">
+
+					<a class="nav-item nav-link text-grey" href="./docs.md" target="_blank">
+						<span>Docs
+							<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px"
+								viewBox="0 0 100 100" class="svg-icon">
+								<path fill="currentColor"
+									d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
+								</path>
+								<polygon fill="currentColor"
+									points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
+								</polygon>
+							</svg>
+						</span>
+					</a>
+
+					<a class="nav-item nav-link text-grey" href="https://gitee.com/fish-in-jiangan-river/emptyshot" target="_blank">
+						<span>Gitee
+							<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px"
+								viewBox="0 0 100 100" class="svg-icon">
+								<path fill="currentColor"
+									d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z">
+								</path>
+								<polygon fill="currentColor"
+									points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9">
+								</polygon>
+							</svg>
+						</span>
+					</a>
+
+				</div>
+			</div>
+		</div>
+	</nav>
+    <!-- 电影海报部分 -->
+	<div class="banner-bg" id="banner">
+		<div class="flying-text" id='banner-text'>
+			<div id='banner-text-main' class="color-cyan-dark xl-font"><b>红色电影意象</b></div>
+			<div id='banner-text-sub' class="color-grey">传承红色经典，理解镜头故事</div>
+			<br />
+			<br />
+			<button type="button" class=" btn btn-success btn-rounded" onclick="slideTo('download'); return false;">
+				&nbsp&nbspDownload&nbsp&nbsp</button>
+		</div>
+		<div id="banner-im-grid">
+            <div class="flying-text2" id='banner-text'>
+                <img class="banner-im" src="https://www.pngdirs.com/attachment/a/a-55121.png" />
+            </div>
+            <div class="flying-text3" id='banner-text'>
+                <img class="banner-im" src="https://www.pngdirs.com/attachment/a/a-55121.png" />
+            </div>
+            <div class="flying-text4" id='banner-text'>
+                <img class="banner-im" src="https://www.pngdirs.com/attachment/a/a-55121.png" />
+            </div>
+            <div class="flying-text5" id='banner-text'>
+                <img class="banner-im" src="https://www.pngdirs.com/attachment/a/a-55121.png" />
+            </div>
+		</div>
+	</div>
+    <!-- 对应导航栏左侧的各个模块 -->
+	<div class="container">
+        <!-- About部分 -->
+		<div class="row" id="about">
+			<div class="col-xl-12 col-md-12 col-12">
+				<div class="row abs-mg-bot-xl text-center justify-content-between">
+					<div class="abs-mg-top-hg  col-xl-3 col-lg-3 col-md-3 col-12">
+						<div class="abs-mg-bot"><img src='src/imgs/hdd.png' class="icon"></div>
+						<div class="md-font bold abs-mg-bot-ti">海量数据</div>
+						<div class="sm-font color-light width-limit-250 ">
+							<div>五百多部电影，一千多部预告片等等，都可以在本数据集中免费获得。</div>
+						</div>
+					</div>
+					<div class="abs-mg-top-hg  col-xl-3 col-lg-3 col-md-3 col-12">
+						<div class="abs-mg-bot"><img src='src/imgs/anno.png' class="icon"></div>
+						<div class="md-font bold abs-mg-bot-ti">丰富的注释</div>
+						<div class="sm-font color-light width-limit-250">各种注释提供了关于演员、场景和电影风格的各种注释。</div>
+					</div>
+					<div class="abs-mg-top-hg col-xl-3 col-lg-3 col-md-3 col-12">
+						<div class="abs-mg-bot"><img src='src/imgs/code.png' class="icon"></div>
+						<div class="md-font bold abs-mg-bot-ti">多样化的任务</div>
+						<div class="sm-font color-light width-limit-250">支持若干视觉和语言任务，从低级到高级。</div>
+					</div>
+					<div class="abs-mg-top-hg col-xl-3 col-lg-3 col-md-3 col-12">
+						<div class="abs-mg-bot"><img src='src/imgs/toolbox.png' class="icon"></div>
+						<div class="md-font bold abs-mg-bot-ti">开放源代码工具箱</div>
+						<div class="sm-font color-light width-limit-250">易于使用的工具箱，设计用于实验和数据处理。</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+        <!-- Contrast部分 -->
+		<div class="row" id="contrast">
+			<div class="col-xl-12 col-md-12 col-12 abs-pd-top-md">
+				<hr />
+				<p class="lg-font bold">
+					红色电影镜头信息比较
+				</p>
+			</div>
+			<div class="col-xl-12 col-md-12 col-12">
+				<div class="row flex-nowrap abs-mg-bot-lg text-center justify-content-start overflowx">
+					<div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+						<div class="card">
+							<div class="card-header bold"> 🎬&nbsp 空境分布</div>
+							<div class="card-body sm-font">
+								<div class="card-text-limit overflowy color-light justify-text-between">
+                                    空镜头，又叫“景物镜头”，是指画面中没有人。空镜头与常规镜头可以互补而不能代替，是导演阐明思想内容、叙述故事情节、抒发感情的重要手段。
+                                    空镜头常用以介绍环境背景、交代时间空间、抒发人物情绪、推进故事情节、表达作者态度，具有说明、暗示、象征、隐喻等功能，
+                                    在影片中能够产生借物喻情、见景生情、情景交融、渲染意境、烘托气氛、引起联想等艺术效果，在银幕的时空转换和调节影片节奏方面也有独特作用。
+                                </div>
+								<a href="#" class="contrastBtn d-none d-sm-block btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-data-movie">进入比较</a>
+							</div>
+						</div>
+					</div>
+					<div class=" col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+						<div class="card">
+							<div class="card-header bold">🎞️&nbsp 镜头变化快慢</div>
+							<div class="card-body  sm-font">
+								<div class="card-text-limit overflowy color-light justify-text-between">
+                                    快慢镜头的速度是指特定的镜头在特定的时间内所能传送的光量。传送光量多的镜头被称为快镜头，传送光量相当少的镜头则被称为慢镜头。
+                                    不要把这里所说的快慢概念同镜头所能捕捉快速运动物体的能力相混淆，就像把"干"这个术语用于马提尼酒时实际上与相对湿度并没有关系，
+                                    把"快"这个术语用于镜头时同它凝固住快速运动物体的能力也没有什么关系；它只是用以描述镜头在特定的时间内所传送的光量。
+								</div>
+								<a href="#" class="contrastBtn d-none d-sm-block btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-data-trailer">进入比较</a>
+							</div>
+						</div>
+					</div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+						<div class="card">
+							<div class="card-header bold"> 🎬&nbsp 空境分布</div>
+							<div class="card-body sm-font">
+								<div class="card-text-limit overflowy color-light justify-text-between">
+                                    空镜头，又叫“景物镜头”，是指画面中没有人。空镜头与常规镜头可以互补而不能代替，是导演阐明思想内容、叙述故事情节、抒发感情的重要手段。
+                                    空镜头常用以介绍环境背景、交代时间空间、抒发人物情绪、推进故事情节、表达作者态度，具有说明、暗示、象征、隐喻等功能，
+                                    在影片中能够产生借物喻情、见景生情、情景交融、渲染意境、烘托气氛、引起联想等艺术效果，在银幕的时空转换和调节影片节奏方面也有独特作用。
+                                </div>
+								<a href="#" class="contrastBtn d-none d-sm-block btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-data-movie">进入比较</a>
+							</div>
+						</div>
+					</div>
+					<div class=" col-xl-3 col-lg-3 col-md-4 col-sm-6 col-12">
+						<div class="card">
+							<div class="card-header bold">🎞️&nbsp 镜头变化快慢</div>
+							<div class="card-body  sm-font">
+								<div class="card-text-limit overflowy color-light justify-text-between">
+                                    快慢镜头的速度是指特定的镜头在特定的时间内所能传送的光量。传送光量多的镜头被称为快镜头，传送光量相当少的镜头则被称为慢镜头。
+                                    不要把这里所说的快慢概念同镜头所能捕捉快速运动物体的能力相混淆，就像把"干"这个术语用于马提尼酒时实际上与相对湿度并没有关系，
+                                    把"快"这个术语用于镜头时同它凝固住快速运动物体的能力也没有什么关系；它只是用以描述镜头在特定的时间内所传送的光量。
+								</div>
+								<a href="#" class="contrastBtn d-none d-sm-block btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-data-trailer">进入比较</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		respondToWindowWidth();
+		$(window).resize(function () {
+			respondToWindowWidth();
+		});
+		event_bind();
+		popover_bind();
+	</script>
+    <!-- 引入module.js -->
+    <script src="js/index.js" type="module"></script>
+</body>
+
+</html>
