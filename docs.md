@@ -1,0 +1,1 @@
+This is a document about the 红色镜头故事。

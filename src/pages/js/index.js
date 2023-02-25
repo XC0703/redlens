@@ -49,15 +49,15 @@ $('.select1').change(()=>{
 		id:$(".select1 option:selected").val(),
 		text:$(".select1 option:selected").text()
 	}
-	const dom_left_map = document.querySelector(".bot_leftbox .chart_box .map");
+	// const dom_left_map = document.querySelector(".bot_leftbox .chart_box .map");
 	const dom_left = document.querySelector(".bot_leftbox .chart_box .chart img");
 	if(select_left.id){
-		dom_left_map.style.opacity = 0;
-		dom_left.src = decodeURI('./images/movie_imgs/motion/'+select_left.id+'_'+select_left.text+'.png');
+		// dom_left_map.style.opacity = 0;
+		dom_left.src = decodeURI('./images/movie_imgs/'+select_info+'/'+select_left.id+'_'+select_left.text+'.png');
 	}
 	else{
 		dom_left.src = '';
-		dom_left_map.style.opacity = 1;
+		// dom_left_map.style.opacity = 1;
 	}
 	// console.log(select_left,select_right,select_info)
 });
@@ -67,15 +67,15 @@ $('.select2').change(()=>{
 		id:$(".select2 option:selected").val(),
 		text:$(".select2 option:selected").text()
 	}
-	const dom_right_map = document.querySelector(".bot_rightbox .chart_box .map");
+	// const dom_right_map = document.querySelector(".bot_rightbox .chart_box .map");
 	const dom_right = document.querySelector(".bot_rightbox .chart_box .chart img");
 	if(select_right.id){
-		dom_right_map.style.opacity = 0;
-		dom_right.src = decodeURI('./images/movie_imgs/motion/'+select_right.id+'_'+select_right.text+'.png');
+		// dom_right_map.style.opacity = 0;
+		dom_right.src = decodeURI('./images/movie_imgs/'+select_info+'/'+select_right.id+'_'+select_right.text+'.png');
 	}
 	else{
 		dom_right.src = '';
-		dom_right_map.style.opacity = 1;
+		// dom_right_map.style.opacity = 1;
 	}
 	// console.log(select_left,select_right,select_info)
 });
