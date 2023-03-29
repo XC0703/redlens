@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="./emptyshot.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红色电影镜头信息对比平台</title>
+    <style>
+        .content-box{
+            width:100%;
+            height: 100%;
+            position: relative;
+        }
+        h1{
+            font-size: .6rem;
+            margin-top: 1rem;;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .ChangjinLake{
+            width:13rem;
+            height: 8rem;
+            position: absolute;
+            left:50%;
+            margin-left: -6.5rem;
+            background-image: url('./images/ChangjinLake.png');
+            /* background-size:cover可以让图片自适应视口大小并保持比例，同时覆盖整个背景*/
+            background-size: cover; 
+            /* background-repeat:no-repeat可以防止图片重复出现。 */
+            background-repeat: no-repeat;
+            /* background-position:center center可以将图片置于视口中央。 */
+            background-position: center center;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-box">
+        <h1>《长津湖》电影色彩</h1>
+        <div class="ChangjinLake"></div>
+    </div>
+    <!-- 屏幕适配 -->
+    <script type="text/javascript"> 
+        let docEl = document.documentElement, 
+        //当设备的⽅向变化（设备横向持或纵向持）此事件被触发。绑定此事件时， 
+        //注意现在当浏览器不⽀持orientationChange事件的时候我们绑定了resize 事件。
+        //总来的来就是监听当然窗⼝的变化，⼀旦有变化就需要重新设置根字体的值
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function() {
+            //设置根字体⼤⼩ 
+            docEl.style.fontSize = 25 * (docEl.clientWidth / 640) + 'px';
+        }; 
+        //绑定浏览器缩放与加载时间 
+        window.addEventListener(resizeEvt, recalc, false); 
+        document.addEventListener('DOMContentLoaded', recalc, false);
+    </script>
+</body>
+</html>
