@@ -50,32 +50,61 @@ $('.select1').change(()=>{
 		text:$(".select1 option:selected").text()
 	}
 	// const dom_left_map = document.querySelector(".bot_leftbox .chart_box .map");
-	const dom_left = document.querySelector(".bot_leftbox .chart_box .chart img");
-	if(select_left.id){
-		// dom_left_map.style.opacity = 0;
-		dom_left.src = decodeURI('./images/movie_imgs/'+select_info+'/'+select_left.id+'_'+select_left.text+'.png');
+	const dom_left = document.querySelector(".bot_leftbox .chart_box .chart");
+	switch(select_info){
+		case 'color_motion':
+			alert("现在选择的是色彩运镜！！！")
+			break;
+		case 'empty_shot':
+			let img = document.createElement('img');
+			var imgs = dom_left.querySelectorAll('img');
+			if (imgs.length > 0) {
+				// 获取第一个img节点，并将其从父节点中删除
+				var prevImg = imgs[0];
+				dom_left.removeChild(prevImg);
+			}
+			dom_left.appendChild(img);
+			if(select_left.id){
+				// dom_left_map.style.opacity = 0;
+				img.src = decodeURI('./images/movie_imgs/'+select_info+'/'+select_left.id+'_'+select_left.text+'.png');
+			}
+			else{
+				img.src = '';
+				// dom_left_map.style.opacity = 1;
+			}
+			// console.log(select_left,select_right,select_info)
+			break;
 	}
-	else{
-		dom_left.src = '';
-		// dom_left_map.style.opacity = 1;
-	}
-	// console.log(select_left,select_right,select_info)
 });
 $('.select2').change(()=>{
-	// 获取左边select的值
+	// 获取右边select的值
 	select_right = {
 		id:$(".select2 option:selected").val(),
 		text:$(".select2 option:selected").text()
 	}
 	// const dom_right_map = document.querySelector(".bot_rightbox .chart_box .map");
-	const dom_right = document.querySelector(".bot_rightbox .chart_box .chart img");
-	if(select_right.id){
-		// dom_right_map.style.opacity = 0;
-		dom_right.src = decodeURI('./images/movie_imgs/'+select_info+'/'+select_right.id+'_'+select_right.text+'.png');
-	}
-	else{
-		dom_right.src = '';
-		// dom_right_map.style.opacity = 1;
-	}
+	const dom_right = document.querySelector(".bot_rightbox .chart_box .chart");
+	switch(select_info){
+		case 'color_motion':
+			alert("现在选择的是色彩运镜！！！")
+			break;
+		case 'empty_shot':
+			let img = document.createElement('img');
+			var imgs = dom_right.querySelectorAll('img');
+			if (imgs.length > 0) {
+				// 获取第一个img节点，并将其从父节点中删除
+				var prevImg = imgs[0];
+				dom_right.removeChild(prevImg);
+			}
+			dom_right.appendChild(img);
+			if(select_right.id){
+				// dom_right_map.style.opacity = 0;
+				img.src = decodeURI('./images/movie_imgs/'+select_info+'/'+select_right.id+'_'+select_right.text+'.png');
+			}
+			else{
+				img.src = '';
+				// dom_right_map.style.opacity = 1;
+			}
+		}
 	// console.log(select_left,select_right,select_info)
 });
