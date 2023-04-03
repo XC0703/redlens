@@ -20,7 +20,7 @@ function deepCopy (param) {
 // 使用封装的深拷贝读取json数据
 let movieData;
 $.ajaxSetup({async:false});//将getJson函数的执行方式改为同步执行，即可对外面的变量进行赋值操作
-$.getJSON('../pages/data/movie.json',data=>{
+$.getJSON('../compareSite/data/movie.json',data=>{
     movieData=deepCopy(data);
 })
 $.ajaxSetup({async:true});//将执行方式改回异步执行即可
@@ -53,7 +53,24 @@ $('.select1').change(()=>{
 	const dom_left = document.querySelector(".bot_leftbox .chart_box .chart");
 	switch(select_info){
 		case 'color_motion':
-			alert("现在选择的是色彩运镜！！！")
+			// 创建iframe元素
+			let iframe = document.createElement('iframe');
+			// 设置iframe属性
+			iframe.src = '../cinemetrics_iframe/index.html';
+			iframe.width = '100%';
+			iframe.height = '100%';
+			// 使用兼容性更好的写法设置frameBorder
+			iframe.setAttribute("frameBorder", "0");
+			iframe.setAttribute("frameborder", "0");
+			iframe.allowFullscreen = true;
+			var iframes = dom_left.querySelectorAll('iframe');
+			if (iframes.length > 0) {
+				// 获取第一个iframe节点，并将其从父节点中删除
+				var prevIframe = iframes[0];
+				dom_left.removeChild(prevIframe);
+			}
+			// 将iframe添加到dom_left中
+			dom_left.appendChild(iframe);
 			break;
 		case 'empty_shot':
 			let img = document.createElement('img');
