@@ -1,0 +1,9 @@
+{
+	"movies": {
+		"Alien": "movies/Alien/data.json",
+		"wolf": "movies\\wolf\\data.json",
+		"long_fly": "movies\\long_fly\\data.json",
+		"战狼2": "movies\\战狼2\\data.json"
+	},
+	"presets": {}
+}
