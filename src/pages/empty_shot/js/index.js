@@ -1,3 +1,29 @@
+// 预加载图片
+let imgs = [];
+function preloadImages() {
+	let imgArray = [
+		decodeURI('./images/movie_imgs/empty_shot/0_八佰.png'),
+		decodeURI('./images/movie_imgs/empty_shot/1_渡江侦察记.png'),
+		decodeURI('./images/movie_imgs/empty_shot/2_芙蓉镇.png'),
+		decodeURI('./images/movie_imgs/empty_shot/3_红灯记.png'),
+		decodeURI('./images/movie_imgs/empty_shot/4_红海行动.png'),
+		decodeURI('./images/movie_imgs/empty_shot/5_湄公河行动.png'),
+		decodeURI('./images/movie_imgs/empty_shot/6_上甘岭.png'),
+		decodeURI('./images/movie_imgs/empty_shot/7_我和我的祖国.png'),
+		decodeURI('./images/movie_imgs/empty_shot/8_战狼.png'),
+		decodeURI('./images/movie_imgs/empty_shot/9_战狼2.png'),
+		decodeURI('./images/movie_imgs/empty_shot/10_长津湖.png'),
+	];
+	for (let i = 0; i < imgArray.length; i++) {
+		let tempImage = new Image();
+		tempImage.src = imgArray[i];
+		imgs.push(tempImage);
+	}
+}
+// 页面加载完成后调用预加载图片函数
+window.onload = preloadImages;
+
+
 //导入本地数据
 // 深拷贝函数
 // 类型判断
@@ -54,7 +80,8 @@ $('.select1').change(()=>{
 	if(select_left.id){
 		// dom_left_map.style.opacity = 0;
 		if(select_info=='empty_shot'){
-			dom_left.src = decodeURI('./images/movie_imgs/'+select_info+'/'+select_left.id+'_'+select_left.text+'.png');
+			// dom_left.src = decodeURI('./images/movie_imgs/'+select_info+'/'+select_left.id+'_'+select_left.text+'.png');
+			dom_left.src = imgs[select_left.id].src;
 		}
 	}
 	else{
@@ -74,7 +101,8 @@ $('.select2').change(()=>{
 	if(select_right.id){
 		// dom_right_map.style.opacity = 0;
 		if(select_info=='empty_shot'){
-			dom_right.src = decodeURI('./images/movie_imgs/'+select_info+'/'+select_right.id+'_'+select_right.text+'.png');
+			// dom_right.src = decodeURI('./images/movie_imgs/'+select_info+'/'+select_right.id+'_'+select_right.text+'.png');
+			dom_right.src = imgs[select_right.id].src;;
 		}
 	}
 	else{
