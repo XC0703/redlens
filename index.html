@@ -8,7 +8,7 @@
 
 	<!-- Meta tags for search engines to crawl -->
 	<meta name="robots" content="index,follow">
-	<meta name="description" content="红色电影意象--一个用于红色电影理解的整体数据集。">
+	<meta name="description" content="红色影像源代码--传承红色经典，讲好中国故事">
 	<meta name="keywords" content="emptyshot, dataset, mmlab, movie, deep learning, video analysis, computer vision">
 
 	<!-- Bootstrap CSS -->
@@ -21,7 +21,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
 
 	<!-- Title and Icon -->
-	<title>红色电影意象——传承红色经典，理解镜头故事</title>
+	<title>红色影像源代码——传承红色经典，讲好中国故事</title>
 	<link rel="shortcut icon" href="./emptyshot.ico" />
 
 	<!-- include css -->
@@ -33,6 +33,41 @@
 
 	<script src="js/annimations.js"></script>
 	<script src="js/responsive.js"></script>
+	<style>
+		footer {
+			background-color: #f2f2f2;
+			text-align: center;
+			padding: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.footer-wrapper {
+			display: flex;
+			align-items: center;
+			flex-direction: column; /* 修改这里，表示垂直排列 */
+			flex-wrap: wrap;
+			font-size: 16px;
+		}
+		.footer-img{
+			height: 40px;
+		}
+		.footer-logo {
+			height: 100%;
+			margin: 5px 20px; /* 设置左右间距为 10px */
+		}
+		/* 媒体查询 */
+		@media only screen and (max-width: 760px) {
+			.footer-wrapper {
+				flex-direction: column;
+				justify-content: center;
+				font-size: 14px;
+			}
+			.footer-logo {
+				height: 25px;
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -41,7 +76,7 @@
 		<div class=" col-xl-2  col-md-2 col-2">
 			<a class="navbar-brand pull-right color-cayan" href="#banner" onclick="slideTo('banner'); return false;">
 				<img src="src/imgs/emptyshot_logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
-				<b>红色电影意象</b>
+				<b>红色影像源代码</b>
 			</a>
 		</div>
 
@@ -50,8 +85,10 @@
 				<div class="navbar-nav ">
 					<a class="nav-item nav-link text-grey" href="#about"
 						onclick="slideTo('about');  return false;">About</a>
-					<a class="nav-item nav-link text-grey" href="#contrast"
-						onclick="slideTo('contrast');  return false;">Contrast</a>
+					<a class="nav-item nav-link text-grey" href="#terms"
+						onclick="slideTo('terms');  return false;">Terms</a>
+					<a class="nav-item nav-link text-grey" href="#copyright"
+						onclick="slideTo('copyright');  return false;">Copyright</a>
 				</div>
 			</div>
 		</div>
@@ -95,8 +132,8 @@
     <!-- 电影海报部分 -->
 	<div class="banner-bg" id="banner">
 		<div class="flying-text" id='banner-text'>
-			<div id='banner-text-main' class="color-cyan-dark xl-font"><b>红色电影意象</b></div>
-			<div id='banner-text-sub' class="color-grey">传承红色经典，理解镜头故事</div>
+			<div id='banner-text-main' class="color-cyan-dark xl-font"><b>红色影像源代码</b></div>
+			<div id='banner-text-sub' class="color-grey">传承红色经典，讲好中国故事</div>
 			<br />
 			<br />
 			<!-- <button type="button" class=" btn btn-success btn-rounded" onclick="slideTo('download'); return false;">
@@ -124,23 +161,22 @@
 			<div class="col-xl-12 col-md-12 col-12">
 				<div class="row abs-mg-bot-xl text-center justify-content-between">
 					<div class="contrastBtn abs-mg-top-hg col-xl-3 col-lg-3 col-md-3 col-12" style="cursor: pointer;">
-						<div class="abs-mg-bot"><img src='src/imgs/code.png' class="icon"></div>
-						<div class="md-font bold abs-mg-bot-ti">色彩运镜比较</div>
+						<div class="abs-mg-bot"><img src='src/imgs/color_motion.png' class="icon"></div>
+						<div class="md-font bold abs-mg-bot-ti">镜头美学</div>
 					</div>
 					<div class="contrastBtn abs-mg-top-hg  col-xl-3 col-lg-3 col-md-3 col-12" style="cursor: pointer;">
-						<div class="abs-mg-bot"><img src='src/imgs/hdd.png' class="icon"></div>
-						<div class="md-font bold abs-mg-bot-ti">空境分布比较</div>
+						<div class="abs-mg-bot"><img src='src/imgs/red_image.png' class="icon"></div>
+						<div class="md-font bold abs-mg-bot-ti">符号意象</div>
 					</div>
 					<div class="contrastBtn abs-mg-top-hg  col-xl-3 col-lg-3 col-md-3 col-12" style="cursor: pointer;">
-						<div class="abs-mg-bot"><img src='src/imgs/anno.png' class="icon"></div>
-						<div class="md-font bold abs-mg-bot-ti">红色意象展示</div>
+						<div class="abs-mg-bot"><img src='src/imgs/empty_shot.png' class="icon"></div>
+						<div class="md-font bold abs-mg-bot-ti">空镜艺术</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
         <!-- Contrast部分 -->
-		<div class="row" id="contrast">
+		<div class="row" id="terms">
 			<div class="col-xl-12 col-md-12 col-12 abs-pd-top-md">
 				<hr />
 				<p class="lg-font bold">
@@ -201,7 +237,19 @@
 				</div>
 			</div>
 		</div>
+		<hr />
 	</div>
+	<!-- copyright部分 -->
+	<footer id = 'copyright'>
+		<div class="footer-wrapper">
+			<p>中外电影视觉框架研究（2023）&copy; 四川大学中华文化传承与全球传播数字融合实验室</p>
+			<p>©国家社科重大项目：中国特色电影知识体系研究</p>
+			<div class="footer-img">
+				<img class="footer-logo" src="src/imgs/scu.png" alt="Logo1">
+				<img class="footer-logo" src="src/imgs/semiotics.png" alt="Logo2">
+			</div>
+		</div>
+	</footer>
 
 	<script>
 		respondToWindowWidth();

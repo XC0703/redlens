@@ -1,1 +1,1 @@
-This is a document about the Project。
+This is a document about the Project.
