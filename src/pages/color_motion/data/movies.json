@@ -1,9 +1,18 @@
 {
 	"movies": {
-		"Alien": "movies/Alien/data.json",
-		"wolf": "movies\\wolf\\data.json",
-		"long_fly": "movies\\long_fly\\data.json",
-		"战狼2": "movies\\战狼2\\data.json"
+		"战狼": "movies\\战狼\\data.json",
+		"让子弹飞": "movies\\让子弹飞\\data.json",
+		"战狼2": "movies\\战狼2\\data.json",
+		"\u6211\u548c\u6211\u7684\u7956\u56fd": "movies\\\u6211\u548c\u6211\u7684\u7956\u56fd\\data.json",
+		"\u5efa\u56fd\u5927\u4e1a": "movies\\\u5efa\u56fd\u5927\u4e1a\\data.json",
+		"\u5efa\u515a\u4f1f\u4e1a": "movies\\\u5efa\u515a\u4f1f\u4e1a\\data.json",
+		"\u7ea2\u706f\u8bb0": "movies\\\u7ea2\u706f\u8bb0\\data.json",
+		"\u8299\u84c9\u9547": "movies\\\u8299\u84c9\u9547\\data.json",
+		"\u957f\u6d25\u6e56": "movies\\\u957f\u6d25\u6e56\\data.json",
+		"\u7518\u5730\u4f20": "movies\\\u7518\u5730\u4f20\\data.json",
+		"\u62ef\u6551\u5927\u5175\u745e\u6069": "movies\\\u62ef\u6551\u5927\u5175\u745e\u6069\\data.json",
+		"\u9003\u79bb\u5fb7\u9ed1\u5170": "movies\\\u9003\u79bb\u5fb7\u9ed1\u5170\\data.json",
+		"\u8840\u6218\u94a2\u952f\u5cad": "movies\\\u8840\u6218\u94a2\u952f\u5cad\\data.json"
 	},
 	"presets": {}
 }

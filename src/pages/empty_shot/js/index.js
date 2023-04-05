@@ -71,42 +71,50 @@ $(document).ready(function() {
 // 监听下拉选择框的改变,并执行回调
 $('.select1').change(()=>{
 	// 获取左边select的值
-	select_left = {
-		id:$(".select1 option:selected").val(),
-		text:$(".select1 option:selected").text()
-	}
+	select_left = $(".select1").select2("data")[0];
 	// const dom_left_map = document.querySelector(".bot_leftbox .chart_box .map");
-	const dom_left = document.querySelector(".bot_leftbox .chart_box .chart img");
+	const dom_left_word = document.querySelector(".bot_leftbox .chart_box .word");
+	const p1 = dom_left_word.querySelector("p:first-child");
+	const p2 = dom_left_word.querySelector("p:nth-child(2)");
+	const dom_left_img = document.querySelector(".bot_leftbox .chart_box .chart img");
 	if(select_left.id){
 		// dom_left_map.style.opacity = 0;
 		if(select_info=='empty_shot'){
-			// dom_left.src = decodeURI('./images/movie_imgs/'+select_info+'/'+select_left.id+'_'+select_left.text+'.png');
-			dom_left.src = imgs[select_left.id].src;
+			p1.textContent = select_left.director;
+			p2.textContent = select_left.year;
+			// dom_left_img.src = decodeURI('./images/movie_imgs/'+select_info+'/'+select_left.id+'_'+select_left.text+'.png');
+			dom_left_img.src = imgs[select_left.id].src;
 		}
 	}
 	else{
-		dom_left.src = '';
+		p1.textContent = '';
+		p2.textContent = '';
+		dom_left_img.src = '';
 		// dom_left_map.style.opacity = 1;
 	}
 	// console.log(select_left,select_right,select_info)
 });
-$('.select2').change(()=>{
+$('.select3').change(()=>{
 	// 获取右边select的值
-	select_right = {
-		id:$(".select2 option:selected").val(),
-		text:$(".select2 option:selected").text()
-	}
+	select_right = $(".select3").select2("data")[0];
 	// const dom_right_map = document.querySelector(".bot_rightbox .chart_box .map");
-	const dom_right = document.querySelector(".bot_rightbox .chart_box .chart img");
+	const dom_right_word = document.querySelector(".bot_rightbox .chart_box .word");
+	const p1 = dom_right_word.querySelector("p:first-child");
+	const p2 = dom_right_word.querySelector("p:nth-child(2)");
+	const dom_right_img = document.querySelector(".bot_rightbox .chart_box .chart img");
 	if(select_right.id){
 		// dom_right_map.style.opacity = 0;
 		if(select_info=='empty_shot'){
-			// dom_right.src = decodeURI('./images/movie_imgs/'+select_info+'/'+select_right.id+'_'+select_right.text+'.png');
-			dom_right.src = imgs[select_right.id].src;;
+			p1.textContent = select_right.director;
+			p2.textContent = select_right.year;
+			// dom_right_img.src = decodeURI('./images/movie_imgs/'+select_info+'/'+select_right.id+'_'+select_right.text+'.png');
+			dom_right_img.src = imgs[select_right.id].src;;
 		}
 	}
 	else{
-		dom_right.src = '';
+		p1.textContent = '';
+		p2.textContent = '';
+		dom_right_img.src = '';
 		// dom_right_map.style.opacity = 1;
 	}
 	// console.log(select_left,select_right,select_info)

@@ -50,7 +50,7 @@
 								height: 14px;
 								margin-left: 3px;
 							`},o.createElement("img",{src:m.a,alt:"remove"}))),l?o.createElement("div",{className:e`
-								text-align: center;
+								// text-align: center;
 								font-size: 12px;
 								margin-top: 3px;
 							`},l.director,o.createElement("br",null),l.year):null)})))};v.propTypes={dispatch:r.func.isRequired,movies:r.object.isRequired,selectedMovies:r.array.isRequired},v.defaultProps={},t.a=v}).call(this,n(17).css,n(0),n(0).Fragment,n(11))},53:function(e,t,n){"use strict";(function(e,o){var i=n(56),r=n.n(i),s=n(22),a=n.n(s),l=n(55),c=n.n(l),d=n(13),u=n.n(d),m=n(54),p=n.n(m);const h=t=>{const{movies:n,selection:o,changeHandler:i,selectedMovies:s}=t,l=p()(u.a,c()(a.a))(n);return e.createElement("select",{value:o,onChange:e=>{i(e.target.value)}},e.createElement("option",{value:""}),l.map(t=>e.createElement("option",{key:t,value:t,disabled:r()(t,s)},t)))};h.propTypes={movies:o.object.isRequired,selection:o.string.isRequired,selectedMovies:o.array.isRequired,changeHandler:o.func.isRequired},h.defaultProps={},t.a=h}).call(this,n(0),n(11))},57:function(e,t,n){"use strict";t.a="./assets/+.5532b2f9139dc1320893969d0e0fe900.svg"},60:function(e,t,n){"use strict";(function(e,o,i,r){var s=n(28),a=n.n(s),l=n(63),c=n.n(l),d=n(6),u=n(61),m=n.n(u),p=n(62),h=n(69),f=n(15),v=n(1);const g=e`
